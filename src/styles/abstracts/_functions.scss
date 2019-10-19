@@ -1,7 +1,18 @@
+@import '../themes/theme';
+
 @function headings($from: 1, $to: 6) {
   @if $from == $to {
     @return 'h#{$from}';
   } @else {
     @return 'h#{$from},' + headings($from + 1, $to);
   }
+}
+
+@function color($key) {
+  @if map-has-key($colors, $key) {
+    @return map-get($colors, $key);
+  }
+
+  @warn 'Unknown `#{$key}` in $colors.';
+  @return null;
 }
