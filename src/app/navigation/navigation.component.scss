@@ -4,27 +4,30 @@
 @import 'vendors/bootstrap';
 
 :host(.navbar) {
-  display: flex;
   position: fixed;
   top: 0;
-  justify-content: space-between;
   background-color: color(--light);
-  padding: $padding;
-  width: 100vw;
-  height: $navbar-height;
-
-
-  @include media-breakpoint-down(md) {
-    justify-content: center;
-    padding: $padding-small;
-    height: $navbar-height * 0.7;
-  }
+  width: 100%;
 }
 
 .navbar {
+  &-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: $padding;
+    height: $navbar-height;
+
+    @include media-breakpoint-down(md) {
+      justify-content: center;
+      padding: $padding-small;
+      height: $navbar-height * 0.7;
+    }
+  }
+
   &-toggler {
     @include square($navbar-height);
 
+    display: none;
     position: absolute;
     top: 0;
     left: 0;
@@ -39,8 +42,9 @@
       background: url('/assets/images/menu.svg') no-repeat;
     }
 
-    @include media-breakpoint-up(lg) {
-      display: none;
+    @include media-breakpoint-down(md) {
+      @include square($navbar-height * 0.7);
+      display: inline-block;
     }
   }
 
