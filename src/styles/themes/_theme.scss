@@ -1,3 +1,43 @@
+$red-pink: #ef3a5d;
+
+$cerulean: #0082ca;
+$seafoam-blue: #66cad8;
+$ice: #d1ffed;
+$light-blue-grey-two: #d0e8e6;
+$light-blue-grey: #e3f5f7;
+
+$petrol: #006a62;
+$butterscotch: #ffcc46;
+
+$black: rgba(0, 0, 0, 0);
+$gunmetal-two: #535f65;
+$gunmetal: #525357;
+$battleship-grey: #6f7982;
+$steel-grey: #7f8185;
+$silver: #c2c7ca;
+$white-two: #d8d8d8;
+$pale-grey: #f7f5f7;
+$white: #fff;
+
 $colors: (
-  --light: #fff,
+  --primary: $red-pink,
+
+  --secondary-darkest: $cerulean,
+  --secondary-darker: $seafoam-blue,
+  --secondary: $ice,
+  --secondary-lighter: $light-blue-grey-two,
+  --secondary-lightest: $light-blue-grey,
+
+  --accent-1: $petrol,
+  --accent-2: $butterscotch,
+
+  --neutral-darkest: $black,
+  --neutral-darkest-2: $gunmetal-two,
+  --neutral-darkest-3: $gunmetal,
+  --neutral-darker: $battleship-grey,
+  --neutral-dark: $steel-grey,
+  --neutral: $silver,
+  --neutral-light: $white-two,
+  --neutral-lighter: $pale-grey,
+  --neutral-lightest: $white,
 );
