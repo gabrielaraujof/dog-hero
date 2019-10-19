@@ -1,4 +1,3 @@
-@import 'themes/theme';
 
 @import 'abstracts/functions';
 @import 'abstracts/mixins';
@@ -12,5 +11,6 @@
 @import 'layout/grid';
 @import 'layout/navigation';
 
+@import 'themes/theme';
 
 @import 'vendors/bootstrap';
