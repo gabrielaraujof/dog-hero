@@ -5,6 +5,7 @@
   ],
   "rules": {
     "order/properties-alphabetical-order": null,
+    "max-nesting-depth": 3
   }
 
 }
