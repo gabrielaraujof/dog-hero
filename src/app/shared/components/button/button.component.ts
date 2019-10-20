@@ -1,4 +1,10 @@
-import { Component, OnInit, Input, HostBinding } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  Input,
+  HostBinding,
+  ChangeDetectionStrategy,
+} from '@angular/core';
 
 @Component({
   selector: 'dh-button, button[dh-button]',
@@ -7,6 +13,7 @@ import { Component, OnInit, Input, HostBinding } from '@angular/core';
     <ng-content></ng-content>
   `,
   styleUrls: ['./button.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ButtonComponent {
   @Input()

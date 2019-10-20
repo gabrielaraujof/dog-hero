@@ -1,9 +1,15 @@
-import { Component, Input, HostBinding } from '@angular/core';
+import {
+  Component,
+  Input,
+  HostBinding,
+  ChangeDetectionStrategy,
+} from '@angular/core';
 
 @Component({
   selector: 'dh-icon, span[dh-icon]',
   template: ``,
   styleUrls: ['./icon.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class IconComponent {
   @Input() src = '';
