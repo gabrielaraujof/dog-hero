@@ -1,35 +1,43 @@
-<article class="host-card" *ngFor="let host of hosts | async">
-  <div class="showcase">
-    <dh-avatar
-      [src]="host.user.image_url.split('?')[0]"
-      [alt]="host.user.first_name"
-      [superhero]="host.is_superhero"
-    ></dh-avatar>
-    <header class="showcase-info">
-      <h1>{{ host.user.first_name }}</h1>
-      <h2>{{ host.chopped_desc }}</h2>
-      <p>{{ host.region_address }}</p>
-      <dh-rating
-        [average]="host.rating"
-        [reviewsCount]="host.reviews_count"
-      ></dh-rating>
-    </header>
-    <div class="showcase-aside">
-      <dh-favorite [active]="host.favorite"></dh-favorite>
-      <dh-pricing
-        [value]="host.locale.price"
-        [currenyCode]="host.locale.currency"
-      ></dh-pricing>
-    </div>
+<ng-container *ngFor="let host of hosts | async">
+  <div class="availability-wrapper">
+    <p class="availability" *ngIf="host.availability_confirmed">
+      Disponível para o feriado
+    </p>
   </div>
-  <article
-    dh-review
-    [name]="host.last_review.client_name"
-    [avatarUrl]="host.last_review.client_image_url.split('?')[0]"
-  >
-    {{ host.last_review.body }}
+  <article class="host-card">
+    <!-- Availability might be a component when its content becomes dynamic -->
+    <div class="showcase">
+      <dh-avatar
+        [src]="host.user.image_url.split('?')[0]"
+        [alt]="host.user.first_name"
+        [superhero]="host.is_superhero"
+      ></dh-avatar>
+      <header class="showcase-info">
+        <h1>{{ host.user.first_name }}</h1>
+        <h2>{{ host.chopped_desc }}</h2>
+        <p>{{ host.region_address }}</p>
+        <dh-rating
+          [average]="host.rating"
+          [reviewsCount]="host.reviews_count"
+        ></dh-rating>
+      </header>
+      <div class="showcase-aside">
+        <dh-favorite [active]="host.favorite"></dh-favorite>
+        <dh-pricing
+          [value]="host.locale.price"
+          [currenyCode]="host.locale.currency"
+        ></dh-pricing>
+      </div>
+    </div>
+    <article
+      dh-review
+      [name]="host.last_review.client_name"
+      [avatarUrl]="host.last_review.client_image_url.split('?')[0]"
+    >
+      {{ host.last_review.body }}
+    </article>
+    <button type="button" dh-button>
+      Converse com {{ host.user.first_name }}
+    </button>
   </article>
-  <button type="button" dh-button>
-    Converse com {{ host.user.first_name }}
-  </button>
-</article>
+</ng-container>
