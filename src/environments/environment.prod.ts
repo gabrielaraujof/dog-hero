@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiBaseUrl: '',
+  apiBaseUrl: 'mock/search.json',
 };
