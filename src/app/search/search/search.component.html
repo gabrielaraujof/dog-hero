@@ -2,7 +2,7 @@
   <dh-favorite [active]="host.favorite"></dh-favorite>
   <div class="showcase">
     <dh-avatar
-      [src]="host.user.image_url"
+      [src]="host.user.image_url.split('?')[0]"
       [alt]="host.user.first_name"
       [superhero]="host.is_superhero"
     ></dh-avatar>
