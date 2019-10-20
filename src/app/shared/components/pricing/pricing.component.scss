@@ -1,0 +1,31 @@
+@import 'abstracts/functions';
+@import 'abstracts/variables';
+
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.pricing {
+  &-display {
+    line-height: normal;
+    color: color(--primary);
+    font-family: $font-secondary;
+  }
+
+  &-currency,
+  &-info {
+    font-size: 0.75em;
+  }
+
+  &-value {
+    font-size: 1.625em;
+  }
+
+  &-info {
+    line-height: 1;
+    white-space: nowrap;
+    color: rgba(color(--neutral-darkest), 0.42);
+  }
+}

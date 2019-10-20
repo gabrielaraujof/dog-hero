@@ -13,15 +13,17 @@
   padding: 1rem;
 }
 
-.favorite {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-}
-
 .showcase {
-  display: flex;
   margin-bottom: 1rem;
+
+  .avatar {
+    align-self: flex-start;
+  }
+
+  &,
+  &-aside {
+    display: flex;
+  }
 
   &-info {
     flex-grow: 1;
@@ -35,7 +37,7 @@
     }
 
     h1 {
-      line-height: 1.5rem;
+      line-height: 1.4em;
       color: rgba(color(--neutral-darkest), 0.66);
       font-size: 1.125em;
     }
@@ -58,5 +60,11 @@
       line-height: 1.0625rem;
       font-size: 0.75em;
     }
+  }
+
+  &-aside {
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
   }
 }

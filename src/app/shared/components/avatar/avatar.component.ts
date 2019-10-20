@@ -22,10 +22,10 @@ import {
 })
 export class AvatarComponent {
   @Input() src = '';
-
   @Input() alt = '';
-
   @Input() size: 'medium' | 'small' = 'medium';
+
+  @HostBinding('class.avatar') avatarClass = true;
 
   @HostBinding('class.avatar--superhero')
   @Input()

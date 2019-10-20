@@ -1,17 +1,20 @@
 <article class="host-card" *ngFor="let host of hosts | async">
-  <dh-favorite [active]="host.favorite"></dh-favorite>
   <div class="showcase">
     <dh-avatar
       [src]="host.user.image_url.split('?')[0]"
       [alt]="host.user.first_name"
       [superhero]="host.is_superhero"
     ></dh-avatar>
-    <div class="showcase-info">
+    <header class="showcase-info">
       <h1>{{ host.user.first_name }}</h1>
       <h2>{{ host.chopped_desc }}</h2>
       <p>{{ host.region_address }}</p>
+      <p>{{ host.region_address }}</p>
+    </header>
+    <div class="showcase-aside">
+      <dh-favorite [active]="host.favorite"></dh-favorite>
+      <dh-pricing></dh-pricing>
     </div>
-    <div class="showcase-pricing"></div>
   </div>
   <article
     dh-review
