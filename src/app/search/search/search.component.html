@@ -22,7 +22,7 @@
         ></dh-rating>
       </header>
       <div class="showcase-aside">
-        <dh-favorite [active]="host.favorite"></dh-favorite>
+        <button type="button" aria-label="Favoritar" dh-favorite [active]="host.favorite"></button>
         <dh-pricing
           [value]="host.locale.price"
           [currenyCode]="host.locale.currency"
