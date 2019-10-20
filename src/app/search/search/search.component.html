@@ -24,6 +24,7 @@
   </div>
   <article
     dh-review
+    [name]="host.last_review.client_name"
     [avatarUrl]="host.last_review.client_image_url.split('?')[0]"
   >
     {{ host.last_review.body }}
