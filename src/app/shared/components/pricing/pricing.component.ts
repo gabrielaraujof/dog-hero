@@ -4,7 +4,7 @@ import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
   selector: 'dh-pricing',
   template: `
     <span class="pricing-display">
-      <span class="pricing-currency">R$</span>
+      <span class="pricing-currency">{{ currenyCode | currencySymbol }}</span>
       <span class="pricing-value">{{ value }}</span>
     </span>
     <span class="pricing-info">p/ noite</span>
@@ -13,5 +13,6 @@ import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class PricingComponent {
+  @Input() currenyCode: string;
   @Input() value: number;
 }

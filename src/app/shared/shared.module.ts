@@ -7,6 +7,7 @@ import { AvatarComponent } from './components/avatar/avatar.component';
 import { SpeechBubbleComponent } from './components/speech-bubble/speech-bubble.component';
 import { ReviewComponent } from './components/review/review.component';
 import { PricingComponent } from './components/pricing/pricing.component';
+import { CurrencySymbolPipe } from './pipes/currency-symbol.pipe';
 
 @NgModule({
   imports: [CommonModule],
@@ -18,6 +19,7 @@ import { PricingComponent } from './components/pricing/pricing.component';
     SpeechBubbleComponent,
     ReviewComponent,
     PricingComponent,
+    CurrencySymbolPipe,
   ],
   exports: [
     ButtonComponent,
@@ -27,6 +29,7 @@ import { PricingComponent } from './components/pricing/pricing.component';
     SpeechBubbleComponent,
     ReviewComponent,
     PricingComponent,
+    CurrencySymbolPipe,
   ],
 })
 export class SharedModule {}

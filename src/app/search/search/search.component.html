@@ -13,7 +13,10 @@
     </header>
     <div class="showcase-aside">
       <dh-favorite [active]="host.favorite"></dh-favorite>
-      <dh-pricing></dh-pricing>
+      <dh-pricing
+        [value]="host.locale.price"
+        [currenyCode]="host.locale.currency"
+      ></dh-pricing>
     </div>
   </div>
   <article
