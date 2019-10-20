@@ -35,13 +35,6 @@
     background: none;
     padding: $padding;
 
-    span {
-      @include square(100%);
-
-      display: inline-block;
-      background: url('/assets/images/menu.svg') no-repeat;
-    }
-
     @include media-breakpoint-down(md) {
       @include square($navbar-height * 0.7);
       display: inline-block;
