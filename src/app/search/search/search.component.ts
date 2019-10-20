@@ -5,16 +5,17 @@ import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 import { ISearchResult } from '../search.model';
+import { IHost } from '@shared/models/host.model';
 
 @Component({
-  selector: 'dh-search',
+  selector: 'section[dh-search], dh-search',
   templateUrl: './search.component.html',
   styleUrls: ['./search.component.scss'],
 })
 export class SearchComponent {
-  results: Observable<ISearchResult>;
+  hosts: Observable<IHost[]>;
 
   constructor({ data }: ActivatedRoute) {
-    this.results = data.pipe(map(({ searchResults }) => searchResults));
+    this.hosts = data.pipe(map(({ searchResults: { lists } }) => lists));
   }
 }

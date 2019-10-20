@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { ActivatedRouteSnapshot, Resolve } from '@angular/router';
 
 import { Observable, of } from 'rxjs';
-import { catchError } from 'rxjs/operators';
+import { catchError, map } from 'rxjs/operators';
 
 import { ISearchResult } from './search.model';
 import { environment } from '@env';
@@ -20,6 +20,9 @@ export class SearchService implements Resolve<ISearchResult> {
     const { apiBaseUrl } = environment;
     return this.httpClient
       .get<ISearchResult>(`${apiBaseUrl}?${params.join('&')}`)
-      .pipe(catchError(() => of(null)));
+      .pipe(
+        map(result => ({ lists: [...result.lists.slice(0, 10)] })),
+        catchError(() => of(null)),
+      );
   }
 }

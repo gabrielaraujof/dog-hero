@@ -25,6 +25,8 @@ import {
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class FavoriteComponent {
+  @HostBinding('class.favorite') favoriteClass = true;
+
   @HostBinding('class.favorite--active')
   @Input()
   active = false;
