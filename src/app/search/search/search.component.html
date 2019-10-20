@@ -9,7 +9,10 @@
       <h1>{{ host.user.first_name }}</h1>
       <h2>{{ host.chopped_desc }}</h2>
       <p>{{ host.region_address }}</p>
-      <p>{{ host.region_address }}</p>
+      <dh-rating
+        [average]="host.rating"
+        [reviewsCount]="host.reviews_count"
+      ></dh-rating>
     </header>
     <div class="showcase-aside">
       <dh-favorite [active]="host.favorite"></dh-favorite>
