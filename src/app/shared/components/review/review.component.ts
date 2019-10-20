@@ -7,8 +7,8 @@ import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
       <ng-content></ng-content>
     </dh-speech-bubble>
     <dh-avatar
-      [src]="this.avatarUrl"
-      [alt]="this.name"
+      [src]="avatarUrl"
+      [alt]="name"
       size="small"
     ></dh-avatar>
   `,

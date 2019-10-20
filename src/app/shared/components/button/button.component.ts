@@ -9,7 +9,7 @@ import {
 @Component({
   selector: 'dh-button, button[dh-button]',
   template: `
-    <span dh-icon size="small" [src]="this.iconSrc" *ngIf="this.iconSrc"></span>
+    <span dh-icon size="small" [src]="iconSrc" *ngIf="iconSrc"></span>
     <ng-content></ng-content>
   `,
   styleUrls: ['./button.component.scss'],

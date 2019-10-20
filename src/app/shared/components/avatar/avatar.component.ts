@@ -9,9 +9,9 @@ import {
 @Component({
   selector: 'dh-avatar',
   template: `
-    <img [src]="this.sourceFile" [alt]="this.alt" />
+    <img [src]="sourceFile" [alt]="alt" />
     <span
-      *ngIf="!this.smallSize && this.superhero"
+      *ngIf="!smallSize && superhero"
       dh-icon
       src="images/hero-badge.svg"
       size="small"
