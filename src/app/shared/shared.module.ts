@@ -5,6 +5,7 @@ import { IconComponent } from './components/icon/icon.component';
 import { FavoriteComponent } from './components/favorite/favorite.component';
 import { AvatarComponent } from './components/avatar/avatar.component';
 import { SpeechBubbleComponent } from './components/speech-bubble/speech-bubble.component';
+import { ReviewComponent } from './components/review/review.component';
 
 @NgModule({
   imports: [CommonModule],
@@ -14,6 +15,7 @@ import { SpeechBubbleComponent } from './components/speech-bubble/speech-bubble.
     FavoriteComponent,
     AvatarComponent,
     SpeechBubbleComponent,
+    ReviewComponent,
   ],
   exports: [
     ButtonComponent,
@@ -21,6 +23,7 @@ import { SpeechBubbleComponent } from './components/speech-bubble/speech-bubble.
     FavoriteComponent,
     AvatarComponent,
     SpeechBubbleComponent,
+    ReviewComponent,
   ],
 })
 export class SharedModule {}
