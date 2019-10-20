@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { Component, ChangeDetectionStrategy, HostBinding } from '@angular/core';
 
 @Component({
   selector: 'dh-speech-bubble',
@@ -10,4 +10,6 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
   styleUrls: ['./speech-bubble.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class SpeechBubbleComponent {}
+export class SpeechBubbleComponent {
+  @HostBinding('class.speech-bubble') speechBubbleClass = true;
+}
