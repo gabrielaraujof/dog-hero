@@ -1,5 +1,9 @@
-import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
-import { ValueConverter } from '@angular/compiler/src/render3/view/template';
+import {
+  Component,
+  ChangeDetectionStrategy,
+  Input,
+  HostBinding,
+} from '@angular/core';
 import { HighlightType } from '@shared/models/host.model';
 
 @Component({
@@ -19,6 +23,8 @@ import { HighlightType } from '@shared/models/host.model';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HighlightItemComponent {
+  @HostBinding('class.highlight-item') highlightItemClass = true;
+
   @Input() name: HighlightType;
   @Input() value: string | null;
 

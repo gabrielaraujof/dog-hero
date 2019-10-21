@@ -1,3 +1,15 @@
+@import 'abstracts/functions';
+
 :host {
   display: inline-flex;
+  color: rgba(color(--neutral-darkest), 0.24);
+
+  .highlight-item + & {
+    margin-left: 1em;
+  }
+}
+
+.icon {
+  margin-right: 0.25em;
+  fill: rgba(color(--neutral-darkest), 0.24);
 }

@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { Component, ChangeDetectionStrategy, HostBinding } from '@angular/core';
 
 @Component({
   selector: 'ul[dh-highlights], dh-highlights',
@@ -19,4 +19,6 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class HighlightsComponent {}
+export class HighlightsComponent {
+  @HostBinding('class.highlights') highlightsClass = true;
+}
