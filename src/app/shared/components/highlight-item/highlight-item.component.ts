@@ -5,7 +5,7 @@ import { HighlightType } from '@shared/models/host.model';
 @Component({
   selector: 'li[dh-highlight-item], dh-highlight-item',
   template: `
-    <span dh-icon [src]="sourceIcon" size="small"></span>
+    <span dh-icon [name]="iconName" size="small"></span>
     <ng-container [ngSwitch]="name">
       <span *ngSwitchCase="'room_type'"
         >{value, select, Apartment {Apê} house {Casa}}</span
@@ -22,17 +22,17 @@ export class HighlightItemComponent {
   @Input() name: HighlightType;
   @Input() value: string | null;
 
-  get sourceIcon() {
+  get iconName() {
     switch (this.name) {
       case 'loyal_customers':
-        return 'images/repeat-guests.svg';
+        return 'repeat-guests';
       case 'room_type':
         // Based on the value, we could return different images
-        return 'images/flat.svg';
+        return 'flat';
       case 'only_one_guest':
       case 'supervision':
       default:
-        return 'images/exclusive.svg';
+        return 'exclusive';
     }
   }
 }

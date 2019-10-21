@@ -1,28 +1,38 @@
 import {
   Component,
   Input,
-  HostBinding,
   ChangeDetectionStrategy,
+  HostBinding,
 } from '@angular/core';
 
 @Component({
   selector: 'dh-icon, span[dh-icon]',
-  template: ``,
-  styleUrls: ['./icon.component.scss'],
+  template: `
+    <svg
+      version="1.1"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      [attr.width]="sideSize"
+      [attr.height]="sideSize"
+    >
+      <use [attr.xlink:href]="href"></use>
+    </svg>
+  `,
+  styles: [
+    `
+      :host {
+        display: inline-block;
+      }
+    `,
+  ],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class IconComponent {
-  @Input() src = '';
+  @HostBinding('class.icon') iconClass = true;
 
+  @Input() name;
   @Input() size: 'medium' | 'small' | 'large' = 'medium';
 
-  @HostBinding('style.background-image')
-  get image() {
-    return this.src && `url('/assets/${this.src}')`;
-  }
-
-  @HostBinding('style.width')
-  @HostBinding('style.height')
   get sideSize() {
     switch (this.size) {
       case 'large':
@@ -33,5 +43,9 @@ export class IconComponent {
       default:
         return '3rem';
     }
+  }
+
+  get href() {
+    return `#dh-icon-${this.name}`;
   }
 }

@@ -13,7 +13,7 @@ import {
     <span
       *ngIf="!smallSize && superhero"
       dh-icon
-      src="images/hero-badge.svg"
+      name="hero-badge"
       size="small"
     ></span>
   `,

@@ -9,7 +9,7 @@ import {
 @Component({
   selector: 'dh-button, button[dh-button]',
   template: `
-    <span dh-icon size="small" [src]="iconSrc" *ngIf="iconSrc"></span>
+    <span dh-icon size="small" [name]="iconName" *ngIf="iconName"></span>
     <ng-content></ng-content>
   `,
   styleUrls: ['./button.component.scss'],
@@ -19,7 +19,7 @@ export class ButtonComponent {
   @Input()
   type: 'primary' | 'secondary' | 'dark' | 'default' = 'default';
 
-  @Input() iconSrc = '';
+  @Input() iconName = '';
 
   @HostBinding('class.button--primary')
   get primaryClass() {

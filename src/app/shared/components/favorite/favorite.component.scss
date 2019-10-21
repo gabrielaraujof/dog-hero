@@ -11,14 +11,14 @@
   height: 1.5rem;
 }
 
-svg {
+.icon {
   fill: none;
   stroke-width: 2px;
   stroke: color(--neutral);
 }
 
 :host(.favorite--active) {
-  svg {
+  .icon {
     fill: color(--primary);
     stroke: color(--primary);
   }

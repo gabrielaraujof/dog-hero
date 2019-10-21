@@ -11,6 +11,7 @@ import { RatingComponent } from './components/rating/rating.component';
 import { CurrencySymbolPipe } from './pipes/currency-symbol.pipe';
 import { HighlightsComponent } from './components/highlights/highlights.component';
 import { HighlightItemComponent } from './components/highlight-item/highlight-item.component';
+import { SvgDefinitionsComponent } from './components/svg-definitions/svg-definitions.component';
 
 @NgModule({
   imports: [CommonModule],
@@ -26,6 +27,7 @@ import { HighlightItemComponent } from './components/highlight-item/highlight-it
     CurrencySymbolPipe,
     HighlightsComponent,
     HighlightItemComponent,
+    SvgDefinitionsComponent,
   ],
   exports: [
     ButtonComponent,
@@ -39,6 +41,7 @@ import { HighlightItemComponent } from './components/highlight-item/highlight-it
     CurrencySymbolPipe,
     HighlightsComponent,
     HighlightItemComponent,
+    SvgDefinitionsComponent,
   ],
 })
 export class SharedModule {}
