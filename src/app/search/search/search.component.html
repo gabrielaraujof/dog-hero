@@ -22,7 +22,12 @@
         ></dh-rating>
       </header>
       <div class="showcase-aside">
-        <button type="button" aria-label="Favoritar" dh-favorite [active]="host.favorite"></button>
+        <button
+          type="button"
+          aria-label="Favoritar"
+          dh-favorite
+          [active]="host.favorite"
+        ></button>
         <dh-pricing
           [value]="host.locale.price"
           [currenyCode]="host.locale.currency"
@@ -36,6 +41,14 @@
     >
       {{ host.last_review.body }}
     </article>
+    <ul dh-highlights>
+      <li
+        dh-highlight-item
+        *ngFor="let highlight of host.highlights"
+        [name]="highlight.name"
+        [value]="highlight.value"
+      ></li>
+    </ul>
     <button type="button" dh-button>
       Converse com {{ host.user.first_name }}
     </button>

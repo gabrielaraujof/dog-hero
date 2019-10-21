@@ -1,8 +1,31 @@
 import { IReview } from './review.model';
 import { IUser } from './user.model';
 
+export type HighlightType =
+  | 'loyal_customers'
+  | 'room_type'
+  | 'supervision'
+  | 'only_one_guest';
+
+export function highlightCompareFn(a: HighlightType, b: HighlightType) {
+  const orderMap = {
+    room_type: 1,
+    loyal_customers: 2,
+    supervision: 3,
+    only_one_guest: 4,
+  };
+
+  if (orderMap[a] < orderMap[b]) {
+    return -1;
+  }
+  if (orderMap[a] > orderMap[b]) {
+    return 1;
+  }
+  return 0;
+}
+
 export interface IHighlight {
-  name: 'loyal_customers' | 'room_type' | 'supervision';
+  name: HighlightType;
   value: string | number | null;
 }
 
@@ -29,7 +52,6 @@ export interface IHost {
 }
 
 export class Host {
-
   // availabilityConfirmed: boolean;
   // choppedDesc: string;
   // highlights: IHighlight[];
@@ -43,7 +65,6 @@ export class Host {
   // reviewsCount: number;
   // title: string;
   // user: IUser;
-
   // constructor(raw: IHost) {
   //   this.availabilityConfirmed = raw.availability_confirmed;
   //   this.choppedDesc = raw.chopped_desc;
@@ -62,6 +83,5 @@ export class Host {
   //   this.reviews_count = raw.reviews_count;
   //   this.title = raw.title;
   //   this.user = raw.user;
-
   // }
 }

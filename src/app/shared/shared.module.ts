@@ -9,6 +9,8 @@ import { ReviewComponent } from './components/review/review.component';
 import { PricingComponent } from './components/pricing/pricing.component';
 import { RatingComponent } from './components/rating/rating.component';
 import { CurrencySymbolPipe } from './pipes/currency-symbol.pipe';
+import { HighlightsComponent } from './components/highlights/highlights.component';
+import { HighlightItemComponent } from './components/highlight-item/highlight-item.component';
 
 @NgModule({
   imports: [CommonModule],
@@ -22,6 +24,8 @@ import { CurrencySymbolPipe } from './pipes/currency-symbol.pipe';
     PricingComponent,
     RatingComponent,
     CurrencySymbolPipe,
+    HighlightsComponent,
+    HighlightItemComponent,
   ],
   exports: [
     ButtonComponent,
@@ -33,6 +37,8 @@ import { CurrencySymbolPipe } from './pipes/currency-symbol.pipe';
     PricingComponent,
     RatingComponent,
     CurrencySymbolPipe,
+    HighlightsComponent,
+    HighlightItemComponent,
   ],
 })
 export class SharedModule {}
