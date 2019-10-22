@@ -1,0 +1,28 @@
+@import 'abstracts/functions';
+
+$from: color(--neutral-lightest);
+$to: rgba(255, 255, 255, 0);
+
+:host {
+  display: block;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(-90deg, $from, $to);
+    width: 2rem;
+    content: '';
+  }
+}
+
+.highlights {
+  display: flex;
+  margin: 0.5em 0;
+  padding: 0.5em 0;
+  overflow-x: auto;
+  list-style-type: none;
+  white-space: nowrap;
+}
