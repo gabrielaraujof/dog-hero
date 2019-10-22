@@ -1,0 +1,25 @@
+@import 'abstracts/functions';
+
+:host {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  background: none;
+  padding: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.icon {
+  fill: none;
+  stroke-width: 2px;
+  stroke: color(--neutral);
+}
+
+:host(.favorite--active) {
+  .icon {
+    fill: color(--primary);
+    stroke: color(--primary);
+  }
+}

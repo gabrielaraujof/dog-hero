@@ -8,7 +8,7 @@ const routes: Routes = [
     path: '',
     component: SearchComponent,
     resolve: {
-      searchResults: SearchService,
+      hosts: SearchService,
     },
   },
 ];

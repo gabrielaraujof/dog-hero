@@ -1,0 +1,26 @@
+$medium-size: 4rem;
+
+:host {
+  display: inline-block;
+  position: relative;
+}
+
+img {
+  border-radius: 50%;
+  width: $medium-size;
+  height: $medium-size;
+}
+
+:host(.avatar--small) {
+  img {
+    width: $medium-size / 2;
+    height: $medium-size / 2;
+  }
+}
+
+[dh-icon] {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  transform: translateY(50%);
+}

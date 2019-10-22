@@ -3,9 +3,7 @@
 
 
 main {
-  margin-top: 3.5rem;
-
-  @include media-breakpoint-up(lg) {
-    margin-top: 5rem;
+  @include media-breakpoint-down(md) {
+    margin-top: 3.5rem;
   }
 }

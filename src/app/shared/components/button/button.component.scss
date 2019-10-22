@@ -1,0 +1,35 @@
+@import 'abstracts/functions';
+
+:host {
+  display: inline-flex;
+  justify-content: center;
+  border: 1px solid rgba(color(--neutral-darkest), 0.12);
+  border-radius: 0.25rem;
+  background: color(--neutral-lightest);
+  padding: 0.5rem 1rem;
+  min-height: 2.5rem;
+  white-space: nowrap;
+  color: color(--primary);
+  font-size: 0.875em;
+  font-weight: 700;
+  user-select: none;
+}
+
+:host(.button--primary),
+:host(.button--dark) {
+  border: 0;
+  border-radius: 0.3125rem;
+  color: color(--neutral-lightest);
+}
+
+:host(.button--primary) {
+  background: color(--primary);
+}
+
+:host(.button--dark) {
+  background: color(--neutral-dark);
+}
+
+[dh-icon] {
+  margin-right: 0.5rem;
+}

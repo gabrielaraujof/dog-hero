@@ -1,0 +1,40 @@
+@import 'abstracts/functions';
+@import 'abstracts/variables';
+
+$top-padding: 0.8125em;
+$right-margin: 0.5em;
+$base-color: color(--neutral-lighter);
+$invisible-border: $right-margin solid transparent;
+
+:host {
+  display: inline-block;
+  position: relative;
+  margin-right: $right-margin;
+  border-radius: $right-margin;
+  background-color: $base-color;
+  padding: $top-padding $right-margin 0.9375em 1em;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    right: -$right-margin;
+    border-top: $top-padding solid $base-color;
+    border-right: $invisible-border;
+    border-bottom: $invisible-border;
+    border-left: $invisible-border;
+    content: '';
+  }
+}
+
+.speech-bubble {
+  display: -webkit-box;
+  margin: 0;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: 1.3;
+  color: color(--neutral-darker);
+  font-family: $font-secondary;
+  font-size: 0.875em;
+  font-style: italic;
+}
