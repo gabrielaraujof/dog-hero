@@ -12,9 +12,13 @@ import { Host } from '@shared/models';
   styleUrls: ['./search.component.scss'],
 })
 export class SearchComponent {
-  hosts: Observable<Host[]>;
+  hostsHalves: Array<Observable<Host[]>>;
 
   constructor({ data }: ActivatedRoute) {
-    this.hosts = data.pipe(map(({ hosts }) => hosts));
+    const hosts$ = data.pipe(map(({ hosts }) => hosts));
+    this.hostsHalves = [
+      hosts$.pipe(map(hosts => hosts.slice(0, 5))),
+      hosts$.pipe(map(hosts => hosts.slice(5))),
+    ];
   }
 }

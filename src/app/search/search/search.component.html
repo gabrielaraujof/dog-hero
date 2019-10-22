@@ -2,7 +2,7 @@
 <ng-container
   *ngTemplateOutlet="
     hostListTemplate;
-    context: { $implicit: (hosts | async).slice(0, 5) }
+    context: { $implicit: hostsHalves[0] | async }
   "
 >
 </ng-container>
@@ -18,7 +18,7 @@
 <ng-container
   *ngTemplateOutlet="
     hostListTemplate;
-    context: { $implicit: (hosts | async).slice(5) }
+    context: { $implicit: hostsHalves[0] | async }
   "
 >
 </ng-container>
