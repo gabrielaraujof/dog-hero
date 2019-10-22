@@ -1,83 +1,56 @@
-<!-- List of hosts | First part -->
-<ng-container
-  *ngTemplateOutlet="
-    hostListTemplate;
-    context: { $implicit: hostsHalves[0] | async }
-  "
->
-</ng-container>
-
-<section class="banner banner-insurance">
-  <p>
-    A hospedagem do seu cãozinho estará coberta pela
-    <b>Garantia Veterinária DogHero</b> de até R$5.000 para emergências.
-  </p>
-</section>
-
-<!-- List of hosts | Second part -->
-<ng-container
-  *ngTemplateOutlet="
-    hostListTemplate;
-    context: { $implicit: hostsHalves[0] | async }
-  "
->
-</ng-container>
-
-<ng-template #hostListTemplate let-hosts>
-  <ng-container *ngFor="let host of hosts">
-    <div class="availability-wrapper">
-      <p class="availability" *ngIf="host.availabilityConfirmed">
-        Disponível para o feriado
-      </p>
-    </div>
-    <article class="host-card">
-      <!-- Availability might be a component when its content becomes dynamic -->
-      <div class="showcase">
-        <dh-avatar
-          [src]="host.user.imageUrl"
-          [alt]="host.user.firstName"
-          [superhero]="host.isSuperhero"
-        ></dh-avatar>
-        <header class="showcase-info">
-          <h1>{{ host.user.firstName }}</h1>
-          <h2>{{ host.choppedDesc }}</h2>
-          <p>{{ host.regionAddress }}</p>
-          <dh-rating
-            [average]="host.rating"
-            [reviewsCount]="host.reviewsCount"
-          ></dh-rating>
-        </header>
-        <div class="showcase-aside">
-          <button
-            type="button"
-            aria-label="Favoritar"
-            dh-favorite
-            [active]="host.favorite"
-          ></button>
-          <dh-pricing
-            [value]="host.locale.price"
-            [currenyCode]="host.locale.currency"
-          ></dh-pricing>
-        </div>
+<ng-container *ngFor="let host of hostsHalves[0] | async">
+  <div class="availability-wrapper">
+    <p class="availability" *ngIf="host.availabilityConfirmed">
+      Disponível para o feriado
+    </p>
+  </div>
+  <article class="host-card">
+    <!-- Availability might be a component when its content becomes dynamic -->
+    <div class="showcase">
+      <dh-avatar
+        [src]="host.user.imageUrl"
+        [alt]="host.user.firstName"
+        [superhero]="host.isSuperhero"
+      ></dh-avatar>
+      <header class="showcase-info">
+        <h1>{{ host.user.firstName }}</h1>
+        <h2>{{ host.choppedDesc }}</h2>
+        <p>{{ host.regionAddress }}</p>
+        <dh-rating
+          [average]="host.rating"
+          [reviewsCount]="host.reviewsCount"
+        ></dh-rating>
+      </header>
+      <div class="showcase-aside">
+        <button
+          type="button"
+          aria-label="Favoritar"
+          dh-favorite
+          [active]="host.favorite"
+        ></button>
+        <dh-pricing
+          [value]="host.locale.price"
+          [currenyCode]="host.locale.currency"
+        ></dh-pricing>
       </div>
-      <article
-        dh-review
-        [name]="host.lastReview.clientName"
-        [avatarUrl]="host.lastReview.clientImageUrl"
-      >
-        {{ host.lastReview.body }}
-      </article>
-      <dh-highlights>
-        <li
-          dh-highlight-item
-          *ngFor="let highlight of host.sortedHighlights"
-          [name]="highlight.name"
-          [value]="highlight.value"
-        ></li>
-      </dh-highlights>
-      <button type="button" dh-button>
-        Converse com {{ host.user.firstName }}
-      </button>
+    </div>
+    <article
+      dh-review
+      [name]="host.lastReview.clientName"
+      [avatarUrl]="host.lastReview.clientImageUrl"
+    >
+      {{ host.lastReview.body }}
     </article>
-  </ng-container>
-</ng-template>
+    <dh-highlights>
+      <li
+        dh-highlight-item
+        *ngFor="let highlight of host.highlights"
+        [name]="highlight.name"
+        [value]="highlight.value"
+      ></li>
+    </dh-highlights>
+    <button type="button" dh-button>
+      Converse com {{ host.user.firstName }}
+    </button>
+  </article>
+</ng-container>

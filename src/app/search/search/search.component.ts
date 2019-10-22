@@ -17,7 +17,7 @@ export class SearchComponent {
   constructor({ data }: ActivatedRoute) {
     const hosts$ = data.pipe(map(({ hosts }) => hosts));
     this.hostsHalves = [
-      hosts$.pipe(map(hosts => hosts.slice(0, 5))),
+      hosts$.pipe(map(hosts => hosts)),
       hosts$.pipe(map(hosts => hosts.slice(5))),
     ];
   }
