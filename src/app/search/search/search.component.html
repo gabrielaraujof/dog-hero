@@ -1,6 +1,6 @@
 <ng-container *ngFor="let host of hosts | async">
   <div class="availability-wrapper">
-    <p class="availability" *ngIf="host.availability_confirmed">
+    <p class="availability" *ngIf="host.availabilityConfirmed">
       Disponível para o feriado
     </p>
   </div>
@@ -8,17 +8,17 @@
     <!-- Availability might be a component when its content becomes dynamic -->
     <div class="showcase">
       <dh-avatar
-        [src]="host.user.image_url.split('?')[0]"
-        [alt]="host.user.first_name"
-        [superhero]="host.is_superhero"
+        [src]="host.user.imageUrl"
+        [alt]="host.user.firstName"
+        [superhero]="host.isSuperhero"
       ></dh-avatar>
       <header class="showcase-info">
-        <h1>{{ host.user.first_name }}</h1>
-        <h2>{{ host.chopped_desc }}</h2>
-        <p>{{ host.region_address }}</p>
+        <h1>{{ host.user.firstName }}</h1>
+        <h2>{{ host.choppedDesc }}</h2>
+        <p>{{ host.regionAddress }}</p>
         <dh-rating
           [average]="host.rating"
-          [reviewsCount]="host.reviews_count"
+          [reviewsCount]="host.reviewsCount"
         ></dh-rating>
       </header>
       <div class="showcase-aside">
@@ -36,21 +36,21 @@
     </div>
     <article
       dh-review
-      [name]="host.last_review.client_name"
-      [avatarUrl]="host.last_review.client_image_url.split('?')[0]"
+      [name]="host.lastReview.clientName"
+      [avatarUrl]="host.lastReview.clientImageUrl"
     >
-      {{ host.last_review.body }}
+      {{ host.lastReview.body }}
     </article>
     <ul dh-highlights>
       <li
         dh-highlight-item
-        *ngFor="let highlight of host.highlights"
+        *ngFor="let highlight of host.sortedHighlights"
         [name]="highlight.name"
         [value]="highlight.value"
       ></li>
     </ul>
     <button type="button" dh-button>
-      Converse com {{ host.user.first_name }}
+      Converse com {{ host.user.firstName }}
     </button>
   </article>
 </ng-container>

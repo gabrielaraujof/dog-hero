@@ -12,23 +12,6 @@ export interface IHighlight {
   value: string | number | null;
 }
 
-export function highlightCompareFn(a: IHighlight, b: IHighlight) {
-  const orderMap = {
-    room_type: 1,
-    loyal_customers: 2,
-    supervision: 3,
-    only_one_guest: 4,
-  };
-
-  if (orderMap[a.name] < orderMap[b.name]) {
-    return -1;
-  }
-  if (orderMap[a.name] > orderMap[b.name]) {
-    return 1;
-  }
-  return 0;
-}
-
 export interface ICurrencyLocale {
   country: string;
   price: number;
@@ -51,37 +34,62 @@ export interface IHost {
   user: IUser;
 }
 
+export function highlightCompareFn(a: IHighlight, b: IHighlight) {
+  const orderMap = {
+    room_type: 1,
+    loyal_customers: 2,
+    supervision: 3,
+    only_one_guest: 4,
+  };
+
+  if (orderMap[a.name] < orderMap[b.name]) {
+    return -1;
+  }
+  if (orderMap[a.name] > orderMap[b.name]) {
+    return 1;
+  }
+  return 0;
+}
+
 export class Host {
-  // availabilityConfirmed: boolean;
-  // choppedDesc: string;
-  // highlights: IHighlight[];
-  // favorite: boolean;
-  // id: number;
-  // isSuperhero: boolean;
-  // lastReview: IReview;
-  // locale: ICurrencyLocale;
-  // rating: number;
-  // regionAddress: string;
-  // reviewsCount: number;
-  // title: string;
-  // user: IUser;
-  // constructor(raw: IHost) {
-  //   this.availabilityConfirmed = raw.availability_confirmed;
-  //   this.choppedDesc = raw.chopped_desc;
-  //   this.highlights = raw.highlights;
-  //   this.favorite = raw.favorite;
-  //   this.id = raw.id;
-  //   this.isSuperhero = raw.is_superhero;
-  //   const { body, client_name, client_image_url } = raw.last_review;
-  //   const [imageUrl = ''] = client_image_url.split('?');
-  //   this.lastReview = {
-  //     body, name: client_name, imageUrl
-  //   }
-  //   this.locale = raw.locale;
-  //   this.rating = raw.rating;
-  //   this.region_address = raw.region_address;
-  //   this.reviews_count = raw.reviews_count;
-  //   this.title = raw.title;
-  //   this.user = raw.user;
-  // }
+  availabilityConfirmed: boolean;
+  choppedDesc: string;
+  highlights: IHighlight[];
+  favorite: boolean;
+  id: number;
+  isSuperhero: boolean;
+  lastReview: { body: string; clientImageUrl: string; clientName: string };
+  locale: ICurrencyLocale;
+  rating: number;
+  regionAddress: string;
+  reviewsCount: number;
+  title: string;
+  user: { firstName: string; imageUrl: string };
+
+  constructor(raw: IHost) {
+    this.availabilityConfirmed = raw.availability_confirmed;
+    this.choppedDesc = raw.chopped_desc;
+    this.highlights = raw.highlights;
+    this.favorite = raw.favorite;
+    this.id = raw.id;
+    this.isSuperhero = raw.is_superhero;
+    this.lastReview = {
+      body: raw.last_review.body,
+      clientImageUrl: raw.last_review.client_image_url.split('?')[0],
+      clientName: raw.last_review.client_name,
+    };
+    this.locale = raw.locale;
+    this.rating = raw.rating;
+    this.regionAddress = raw.region_address;
+    this.reviewsCount = raw.reviews_count;
+    this.title = raw.title;
+    this.user = {
+      firstName: raw.user.first_name,
+      imageUrl: raw.user.image_url.split('?')[0],
+    };
+  }
+
+  get sortedHighlights() {
+    return [...this.highlights].sort(highlightCompareFn);
+  }
 }
