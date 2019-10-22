@@ -7,7 +7,12 @@ export type HighlightType =
   | 'supervision'
   | 'only_one_guest';
 
-export function highlightCompareFn(a: HighlightType, b: HighlightType) {
+export interface IHighlight {
+  name: HighlightType;
+  value: string | number | null;
+}
+
+export function highlightCompareFn(a: IHighlight, b: IHighlight) {
   const orderMap = {
     room_type: 1,
     loyal_customers: 2,
@@ -15,18 +20,13 @@ export function highlightCompareFn(a: HighlightType, b: HighlightType) {
     only_one_guest: 4,
   };
 
-  if (orderMap[a] < orderMap[b]) {
+  if (orderMap[a.name] < orderMap[b.name]) {
     return -1;
   }
-  if (orderMap[a] > orderMap[b]) {
+  if (orderMap[a.name] > orderMap[b.name]) {
     return 1;
   }
   return 0;
-}
-
-export interface IHighlight {
-  name: HighlightType;
-  value: string | number | null;
 }
 
 export interface ICurrencyLocale {

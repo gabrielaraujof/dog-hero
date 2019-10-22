@@ -16,6 +16,6 @@ export class SearchComponent {
   hosts: Observable<IHost[]>;
 
   constructor({ data }: ActivatedRoute) {
-    this.hosts = data.pipe(map(({ searchResults: { lists } }) => lists));
+    this.hosts = data.pipe(map(({ searchResults }) => searchResults));
   }
 }
