@@ -5,27 +5,29 @@ import { ActivatedRouteSnapshot, Resolve } from '@angular/router';
 import { Observable, of } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
 
-import { ISearchResult } from './search.model';
 import { Host } from '@shared/models';
 import { environment } from '@env';
+import { IHostSearchResult, IHostPage } from './search.model';
 
 @Injectable()
-export class SearchService implements Resolve<Host[]> {
+export class SearchService implements Resolve<IHostPage[]> {
   constructor(private httpClient: HttpClient) {}
 
-  resolve(route: ActivatedRouteSnapshot): Observable<Host[] | null> {
+  resolve(route: ActivatedRouteSnapshot): Observable<IHostPage[] | null> {
     const PAGE_SIZE = 10;
     const page = Number.parseInt(route.queryParamMap.get('page'), 10) || 1;
     const offset = PAGE_SIZE * (page - 1);
 
     const { apiBaseUrl } = environment;
     return this.httpClient
-      .get<ISearchResult>(
-        `${apiBaseUrl}?limit=${PAGE_SIZE}&offset${offset}`,
-      )
+      .get<IHostSearchResult>(`${apiBaseUrl}?limit=${PAGE_SIZE}&offset${offset}`)
       .pipe(
-        map(({ lists }) => lists.slice(offset, offset + PAGE_SIZE)),
-        map(rawHosts => rawHosts.map(raw => new Host(raw))),
+        map(results => ({
+          ...results,
+          lists: results.lists
+            .slice(offset, offset + PAGE_SIZE)
+            .map(raw => new Host(raw)),
+        })),
         catchError(() => of(null)),
       );
   }
