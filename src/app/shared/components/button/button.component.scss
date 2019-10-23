@@ -30,6 +30,11 @@
   background: color(--neutral-dark);
 }
 
+:host([disabled]) {
+  background-color: color(--neutral-lighter);
+  color: color(--neutral);
+}
+
 [dh-icon] {
   margin-right: 0.5rem;
 }

@@ -18,6 +18,13 @@
 >
 </ng-container>
 
+<nav
+  dh-pagination
+  [current]="currentPage$ | async"
+  [total]="totalPages$ | async"
+  (pageChange)="onPageChange($event)"
+></nav>
+
 <ng-template #HostCardTemplate let-hosts>
   <ng-container *ngFor="let host of hosts | async">
     <div class="availability-wrapper">

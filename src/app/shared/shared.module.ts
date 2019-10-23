@@ -12,6 +12,7 @@ import { CurrencySymbolPipe } from './pipes/currency-symbol.pipe';
 import { HighlightsComponent } from './components/highlights/highlights.component';
 import { HighlightItemComponent } from './components/highlight-item/highlight-item.component';
 import { SvgDefinitionsComponent } from './components/svg-definitions/svg-definitions.component';
+import { PaginationComponent } from './components/pagination/pagination.component';
 
 @NgModule({
   imports: [CommonModule],
@@ -28,6 +29,7 @@ import { SvgDefinitionsComponent } from './components/svg-definitions/svg-defini
     HighlightsComponent,
     HighlightItemComponent,
     SvgDefinitionsComponent,
+    PaginationComponent,
   ],
   exports: [
     ButtonComponent,
@@ -42,6 +44,7 @@ import { SvgDefinitionsComponent } from './components/svg-definitions/svg-defini
     HighlightsComponent,
     HighlightItemComponent,
     SvgDefinitionsComponent,
+    PaginationComponent,
   ],
 })
 export class SharedModule {}

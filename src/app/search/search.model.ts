@@ -1,5 +1,10 @@
-import { IHost } from '@shared/models/host.model';
+import { IPage, IHost, Host } from '@shared/models';
 
-export interface ISearchResult {
+export interface IHostSearchResult extends IPage {
   lists: IHost[];
 }
+
+export interface IHostPage extends IPage {
+  lists: Host[];
+}
+
