@@ -7,7 +7,7 @@ const routes: Routes = [
     loadChildren: () =>
       import('./search/search.module').then(mod => mod.SearchModule),
   },
-  { path: '', redirectTo: '/search', pathMatch: 'full' },
+  { path: '', redirectTo: '/search?page=1', pathMatch: 'full' },
 ];
 
 @NgModule({

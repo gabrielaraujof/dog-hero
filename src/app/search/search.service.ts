@@ -14,15 +14,17 @@ export class SearchService implements Resolve<Host[]> {
   constructor(private httpClient: HttpClient) {}
 
   resolve(route: ActivatedRouteSnapshot): Observable<Host[] | null> {
-    const params = route.queryParamMap.keys.map(
-      k => `${k}=${route.queryParamMap[k]}`,
-    );
+    const PAGE_SIZE = 10;
+    const page = Number.parseInt(route.queryParamMap.get('page'), 10) || 1;
+    const offset = PAGE_SIZE * (page - 1);
 
     const { apiBaseUrl } = environment;
     return this.httpClient
-      .get<ISearchResult>(`${apiBaseUrl}?${params.join('&')}`)
+      .get<ISearchResult>(
+        `${apiBaseUrl}?limit=${PAGE_SIZE}&offset${offset}`,
+      )
       .pipe(
-        map(({ lists }) => lists.slice(0, 10)),
+        map(({ lists }) => lists.slice(offset, offset + PAGE_SIZE)),
         map(rawHosts => rawHosts.map(raw => new Host(raw))),
         catchError(() => of(null)),
       );
