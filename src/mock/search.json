@@ -4,8 +4,8 @@
       "availability_confirmed": true,
       "chopped_desc": "Os cachorros são sinceros, amorosos e confiáveis. O ser humano tem muito o que aprender com eles. Por isso gosto de receber esses seres maravilhosos em casa pra poder adquirir dele…",
       "highlights": [
-        {"name": "loyal_customers", "value": "4"}, 
-        {"name": "room_type", "value": "Apartment"}, 
+        {"name": "room_type", "value": "Apartment"},
+        {"name": "loyal_customers", "value": "4"},
         {"name": "supervision", "value": null}
       ],
       "favorite": true,
@@ -30,8 +30,8 @@
       "availability_confirmed": false,
       "chopped_desc": "Olá! Temos o enorme prazer em cuidar do seu cão quando você precisar. Pode ser em qualquer dia da semana. Se...",
       "highlights": [
-        {"name": "loyal_customers", "value": "2"}, 
-        {"name": "room_type", "value": "Apartment"}, 
+        {"name": "room_type", "value": "Apartment"},
+        {"name": "loyal_customers", "value": "2"},
         {"name": "supervision", "value": null}
       ],
       "favorite": false,
@@ -56,8 +56,8 @@
       "availability_confirmed": true,
       "chopped_desc": "Temos o enorme prazer em cuidar do seu cão quando você precisar.",
       "highlights": [
-        {"name": "loyal_customers", "value": "4"}, 
-        {"name": "room_type", "value": "Apartment"}, 
+        {"name": "room_type", "value": "Apartment"},
+        {"name": "loyal_customers", "value": "4"},
         {"name": "supervision", "value": null}
       ],
       "favorite": true,
@@ -82,8 +82,8 @@
       "availability_confirmed": true,
       "chopped_desc": "Os cachorros são sinceros, amorosos e confiáveis. O ser humano tem muito o que aprender com eles. Por isso gosto de receber esses seres maravilhosos em casa pra poder adquirir dele…",
       "highlights": [
-        {"name": "loyal_customers", "value": "4"}, 
-        {"name": "room_type", "value": "Apartment"}, 
+        {"name": "room_type", "value": "Apartment"},
+        {"name": "loyal_customers", "value": "4"},
         {"name": "supervision", "value": null}
       ],
       "favorite": true,
@@ -108,8 +108,8 @@
       "availability_confirmed": false,
       "chopped_desc": "Olá! Temos o enorme prazer em cuidar do seu cão quando você precisar. Pode ser em qualquer dia da semana. Se...",
       "highlights": [
-        {"name": "loyal_customers", "value": "2"}, 
-        {"name": "room_type", "value": "Apartment"}, 
+        {"name": "room_type", "value": "Apartment"},
+        {"name": "loyal_customers", "value": "2"},
         {"name": "supervision", "value": null}
       ],
       "favorite": false,
@@ -134,8 +134,8 @@
       "availability_confirmed": true,
       "chopped_desc": "Temos o enorme prazer em cuidar do seu cão quando você precisar.",
       "highlights": [
-        {"name": "loyal_customers", "value": "4"}, 
-        {"name": "room_type", "value": "Apartment"}, 
+        {"name": "room_type", "value": "Apartment"},
+        {"name": "loyal_customers", "value": "4"},
         {"name": "supervision", "value": null}
       ],
       "favorite": true,
@@ -160,8 +160,8 @@
       "availability_confirmed": true,
       "chopped_desc": "Os cachorros são sinceros, amorosos e confiáveis. O ser humano tem muito o que aprender com eles. Por isso gosto de receber esses seres maravilhosos em casa pra poder adquirir dele…",
       "highlights": [
-        {"name": "loyal_customers", "value": "4"}, 
-        {"name": "room_type", "value": "Apartment"}, 
+        {"name": "room_type", "value": "Apartment"},
+        {"name": "loyal_customers", "value": "4"},
         {"name": "supervision", "value": null}
       ],
       "favorite": true,
@@ -186,8 +186,8 @@
       "availability_confirmed": false,
       "chopped_desc": "Olá! Temos o enorme prazer em cuidar do seu cão quando você precisar. Pode ser em qualquer dia da semana. Se...",
       "highlights": [
-        {"name": "loyal_customers", "value": "2"}, 
-        {"name": "room_type", "value": "Apartment"}, 
+        {"name": "room_type", "value": "Apartment"},
+        {"name": "loyal_customers", "value": "2"},
         {"name": "supervision", "value": null}
       ],
       "favorite": false,
@@ -212,8 +212,8 @@
       "availability_confirmed": true,
       "chopped_desc": "Temos o enorme prazer em cuidar do seu cão quando você precisar.",
       "highlights": [
-        {"name": "loyal_customers", "value": "4"}, 
-        {"name": "room_type", "value": "Apartment"}, 
+        {"name": "room_type", "value": "Apartment"},
+        {"name": "loyal_customers", "value": "4"},
         {"name": "supervision", "value": null}
       ],
       "favorite": true,
@@ -238,8 +238,8 @@
       "availability_confirmed": true,
       "chopped_desc": "Os cachorros são sinceros, amorosos e confiáveis. O ser humano tem muito o que aprender com eles. Por isso gosto de receber esses seres maravilhosos em casa pra poder adquirir dele…",
       "highlights": [
-        {"name": "loyal_customers", "value": "4"}, 
-        {"name": "room_type", "value": "Apartment"}, 
+        {"name": "room_type", "value": "Apartment"},
+        {"name": "loyal_customers", "value": "4"},
         {"name": "supervision", "value": null}
       ],
       "favorite": true,
@@ -264,8 +264,8 @@
       "availability_confirmed": false,
       "chopped_desc": "Olá! Temos o enorme prazer em cuidar do seu cão quando você precisar. Pode ser em qualquer dia da semana. Se...",
       "highlights": [
-        {"name": "loyal_customers", "value": "2"}, 
-        {"name": "room_type", "value": "Apartment"}, 
+        {"name": "room_type", "value": "Apartment"},
+        {"name": "loyal_customers", "value": "2"},
         {"name": "supervision", "value": null}
       ],
       "favorite": false,
@@ -290,8 +290,8 @@
       "availability_confirmed": true,
       "chopped_desc": "Temos o enorme prazer em cuidar do seu cão quando você precisar.",
       "highlights": [
-        {"name": "loyal_customers", "value": "4"}, 
-        {"name": "room_type", "value": "Apartment"}, 
+        {"name": "room_type", "value": "Apartment"},
+        {"name": "loyal_customers", "value": "4"},
         {"name": "supervision", "value": null}
       ],
       "favorite": true,
@@ -316,8 +316,8 @@
       "availability_confirmed": true,
       "chopped_desc": "Os cachorros são sinceros, amorosos e confiáveis. O ser humano tem muito o que aprender com eles. Por isso gosto de receber esses seres maravilhosos em casa pra poder adquirir dele…",
       "highlights": [
-        {"name": "loyal_customers", "value": "4"}, 
-        {"name": "room_type", "value": "Apartment"}, 
+        {"name": "room_type", "value": "Apartment"},
+        {"name": "loyal_customers", "value": "4"},
         {"name": "supervision", "value": null}
       ],
       "favorite": true,
@@ -342,8 +342,8 @@
       "availability_confirmed": false,
       "chopped_desc": "Olá! Temos o enorme prazer em cuidar do seu cão quando você precisar. Pode ser em qualquer dia da semana. Se...",
       "highlights": [
-        {"name": "loyal_customers", "value": "2"}, 
-        {"name": "room_type", "value": "Apartment"}, 
+        {"name": "room_type", "value": "Apartment"},
+        {"name": "loyal_customers", "value": "2"},
         {"name": "supervision", "value": null}
       ],
       "favorite": false,
@@ -368,8 +368,8 @@
       "availability_confirmed": true,
       "chopped_desc": "Temos o enorme prazer em cuidar do seu cão quando você precisar.",
       "highlights": [
-        {"name": "loyal_customers", "value": "4"}, 
-        {"name": "room_type", "value": "Apartment"}, 
+        {"name": "room_type", "value": "Apartment"},
+        {"name": "loyal_customers", "value": "4"},
         {"name": "supervision", "value": null}
       ],
       "favorite": true,
@@ -394,8 +394,8 @@
       "availability_confirmed": true,
       "chopped_desc": "Os cachorros são sinceros, amorosos e confiáveis. O ser humano tem muito o que aprender com eles. Por isso gosto de receber esses seres maravilhosos em casa pra poder adquirir dele…",
       "highlights": [
-        {"name": "loyal_customers", "value": "4"}, 
-        {"name": "room_type", "value": "Apartment"}, 
+        {"name": "room_type", "value": "Apartment"},
+        {"name": "loyal_customers", "value": "4"},
         {"name": "supervision", "value": null}
       ],
       "favorite": true,
@@ -420,8 +420,8 @@
       "availability_confirmed": false,
       "chopped_desc": "Olá! Temos o enorme prazer em cuidar do seu cão quando você precisar. Pode ser em qualquer dia da semana. Se...",
       "highlights": [
-        {"name": "loyal_customers", "value": "2"}, 
-        {"name": "room_type", "value": "Apartment"}, 
+        {"name": "room_type", "value": "Apartment"},
+        {"name": "loyal_customers", "value": "2"},
         {"name": "supervision", "value": null}
       ],
       "favorite": false,
@@ -446,8 +446,8 @@
       "availability_confirmed": true,
       "chopped_desc": "Temos o enorme prazer em cuidar do seu cão quando você precisar.",
       "highlights": [
-        {"name": "loyal_customers", "value": "4"}, 
-        {"name": "room_type", "value": "Apartment"}, 
+        {"name": "room_type", "value": "Apartment"},
+        {"name": "loyal_customers", "value": "4"},
         {"name": "supervision", "value": null}
       ],
       "favorite": true,
@@ -472,8 +472,8 @@
       "availability_confirmed": true,
       "chopped_desc": "Os cachorros são sinceros, amorosos e confiáveis. O ser humano tem muito o que aprender com eles. Por isso gosto de receber esses seres maravilhosos em casa pra poder adquirir dele…",
       "highlights": [
-        {"name": "loyal_customers", "value": "4"}, 
-        {"name": "room_type", "value": "Apartment"}, 
+        {"name": "room_type", "value": "Apartment"},
+        {"name": "loyal_customers", "value": "4"},
         {"name": "supervision", "value": null}
       ],
       "favorite": true,
@@ -498,8 +498,8 @@
       "availability_confirmed": false,
       "chopped_desc": "Olá! Temos o enorme prazer em cuidar do seu cão quando você precisar. Pode ser em qualquer dia da semana. Se...",
       "highlights": [
-        {"name": "loyal_customers", "value": "2"}, 
-        {"name": "room_type", "value": "Apartment"}, 
+        {"name": "room_type", "value": "Apartment"},
+        {"name": "loyal_customers", "value": "2"},
         {"name": "supervision", "value": null}
       ],
       "favorite": false,
@@ -524,8 +524,8 @@
       "availability_confirmed": true,
       "chopped_desc": "Temos o enorme prazer em cuidar do seu cão quando você precisar.",
       "highlights": [
-        {"name": "loyal_customers", "value": "4"}, 
-        {"name": "room_type", "value": "Apartment"}, 
+        {"name": "room_type", "value": "Apartment"},
+        {"name": "loyal_customers", "value": "4"},
         {"name": "supervision", "value": null}
       ],
       "favorite": true,
@@ -550,8 +550,8 @@
       "availability_confirmed": true,
       "chopped_desc": "Os cachorros são sinceros, amorosos e confiáveis. O ser humano tem muito o que aprender com eles. Por isso gosto de receber esses seres maravilhosos em casa pra poder adquirir dele…",
       "highlights": [
-        {"name": "loyal_customers", "value": "4"}, 
-        {"name": "room_type", "value": "Apartment"}, 
+        {"name": "room_type", "value": "Apartment"},
+        {"name": "loyal_customers", "value": "4"},
         {"name": "supervision", "value": null}
       ],
       "favorite": true,
@@ -576,8 +576,8 @@
       "availability_confirmed": false,
       "chopped_desc": "Olá! Temos o enorme prazer em cuidar do seu cão quando você precisar. Pode ser em qualquer dia da semana. Se...",
       "highlights": [
-        {"name": "loyal_customers", "value": "2"}, 
-        {"name": "room_type", "value": "Apartment"}, 
+        {"name": "room_type", "value": "Apartment"},
+        {"name": "loyal_customers", "value": "2"},
         {"name": "supervision", "value": null}
       ],
       "favorite": false,
@@ -602,8 +602,8 @@
       "availability_confirmed": true,
       "chopped_desc": "Temos o enorme prazer em cuidar do seu cão quando você precisar.",
       "highlights": [
-        {"name": "loyal_customers", "value": "4"}, 
-        {"name": "room_type", "value": "Apartment"}, 
+        {"name": "room_type", "value": "Apartment"},
+        {"name": "loyal_customers", "value": "4"},
         {"name": "supervision", "value": null}
       ],
       "favorite": true,
@@ -628,8 +628,8 @@
       "availability_confirmed": true,
       "chopped_desc": "Os cachorros são sinceros, amorosos e confiáveis. O ser humano tem muito o que aprender com eles. Por isso gosto de receber esses seres maravilhosos em casa pra poder adquirir dele…",
       "highlights": [
-        {"name": "loyal_customers", "value": "4"}, 
-        {"name": "room_type", "value": "Apartment"}, 
+        {"name": "room_type", "value": "Apartment"},
+        {"name": "loyal_customers", "value": "4"},
         {"name": "supervision", "value": null}
       ],
       "favorite": true,
@@ -654,8 +654,8 @@
       "availability_confirmed": false,
       "chopped_desc": "Olá! Temos o enorme prazer em cuidar do seu cão quando você precisar. Pode ser em qualquer dia da semana. Se...",
       "highlights": [
-        {"name": "loyal_customers", "value": "2"}, 
-        {"name": "room_type", "value": "Apartment"}, 
+        {"name": "room_type", "value": "Apartment"},
+        {"name": "loyal_customers", "value": "2"},
         {"name": "supervision", "value": null}
       ],
       "favorite": false,
@@ -680,8 +680,8 @@
       "availability_confirmed": true,
       "chopped_desc": "Temos o enorme prazer em cuidar do seu cão quando você precisar.",
       "highlights": [
-        {"name": "loyal_customers", "value": "4"}, 
-        {"name": "room_type", "value": "Apartment"}, 
+        {"name": "room_type", "value": "Apartment"},
+        {"name": "loyal_customers", "value": "4"},
         {"name": "supervision", "value": null}
       ],
       "favorite": true,
