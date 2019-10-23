@@ -1,25 +1,37 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import {
+  Component,
+  Input,
+  Output,
+  EventEmitter,
+  HostBinding,
+} from '@angular/core';
 
 @Component({
   selector: 'nav[dh-pagination], dh-pagination',
   template: `
-    <ul>
+    <ul class="pagination">
       <li>
         <button
+          dh-button
           type="button"
           aria-label="Anterior"
           (click)="pageChange.emit(current - 1)"
           [disabled]="current === 1"
-        ></button>
+        >
+          Anterior
+        </button>
       </li>
-      <li>{{ current }} de {{ total }}</li>
+      <li class="pagination-info">{{ current }} de {{ total }}</li>
       <li>
         <button
+          dh-button
           type="button"
           aria-label="Próxima"
           (click)="pageChange.emit(current + 1)"
           [disabled]="current === total"
-        ></button>
+        >
+          Próxima
+        </button>
       </li>
     </ul>
   `,
@@ -29,4 +41,5 @@ export class PaginationComponent {
   @Input() current: number;
   @Input() total: number;
   @Output() pageChange = new EventEmitter<number>();
+  @HostBinding('class.pagination-wrapper') pagination = true;
 }

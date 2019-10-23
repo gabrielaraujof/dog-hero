@@ -17,22 +17,22 @@ import {
 })
 export class ButtonComponent {
   @Input()
-  type: 'primary' | 'secondary' | 'dark' | 'default' = 'default';
+  theme: 'primary' | 'secondary' | 'dark' | 'default' = 'default';
 
   @Input() iconName = '';
 
   @HostBinding('class.button--primary')
   get primaryClass() {
-    return this.type === 'primary';
+    return this.theme === 'primary';
   }
 
   @HostBinding('class.button--secondary')
   get secondaryClass() {
-    return this.type === 'secondary';
+    return this.theme === 'secondary';
   }
 
   @HostBinding('class.button--dark')
   get darkClass() {
-    return this.type === 'dark';
+    return this.theme === 'dark';
   }
 }
