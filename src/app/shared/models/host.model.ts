@@ -34,23 +34,6 @@ export interface IHost {
   user: IUser;
 }
 
-export function highlightCompareFn(a: IHighlight, b: IHighlight) {
-  const orderMap = {
-    room_type: 1,
-    loyal_customers: 2,
-    supervision: 3,
-    only_one_guest: 4,
-  };
-
-  if (orderMap[a.name] < orderMap[b.name]) {
-    return -1;
-  }
-  if (orderMap[a.name] > orderMap[b.name]) {
-    return 1;
-  }
-  return 0;
-}
-
 export class Host {
   availabilityConfirmed: boolean;
   choppedDesc: string;
@@ -87,9 +70,5 @@ export class Host {
       firstName: raw.user.first_name,
       imageUrl: raw.user.image_url.split('?')[0],
     };
-  }
-
-  get sortedHighlights() {
-    return [...this.highlights].sort(highlightCompareFn);
   }
 }
