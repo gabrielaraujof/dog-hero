@@ -6,9 +6,10 @@ import { SearchService } from './search.service';
 const routes: Routes = [
   {
     path: '',
+    runGuardsAndResolvers: 'paramsOrQueryParamsChange',
     component: SearchComponent,
     resolve: {
-      hosts: SearchService,
+      results: SearchService,
     },
   },
 ];

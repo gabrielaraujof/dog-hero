@@ -5,16 +5,21 @@
 }
 
 .host-card,
+.pagination-wrapper,
 .banner {
   margin-bottom: 1rem;
+}
+
+.host-card,
+.pagination-wrapper {
+  background-color: color(--neutral-lightest);
+  padding: 1rem;
 }
 
 .host-card {
   display: flex;
   position: relative;
   flex-direction: column;
-  background-color: color(--neutral-lightest);
-  padding: 1rem;
 }
 
 .showcase {
@@ -103,4 +108,10 @@
       margin: 0;
     }
   }
+}
+
+.pagination-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
