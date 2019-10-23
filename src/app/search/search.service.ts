@@ -20,14 +20,21 @@ export class SearchService implements Resolve<IHostPage[]> {
 
     const { apiBaseUrl } = environment;
     return this.httpClient
-      .get<IHostSearchResult>(`${apiBaseUrl}?limit=${PAGE_SIZE}&offset${offset}`)
+      .get<IHostSearchResult>(
+        `${apiBaseUrl}?limit=${PAGE_SIZE}&offset${offset}`,
+      )
       .pipe(
-        map(results => ({
-          ...results,
-          lists: results.lists
-            .slice(offset, offset + PAGE_SIZE)
-            .map(raw => new Host(raw)),
-        })),
+        map(results => {
+          const hostList = results.lists;
+          return {
+            ...results,
+            page,
+            total_pages: Math.ceil(hostList.length / PAGE_SIZE),
+            lists: hostList
+              .slice(offset, offset + PAGE_SIZE)
+              .map(raw => new Host(raw)),
+          };
+        }),
         catchError(() => of(null)),
       );
   }
