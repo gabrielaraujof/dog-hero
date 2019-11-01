@@ -49,7 +49,7 @@
     "stylelint-config-concentric-order": "^3.5.0",
     "stylelint-config-sass-guidelines": "^6.1.0",
     "ts-node": "~7.0.0",
-    "tslint": "~5.15.0",
+    "tslint": "~5.20.0",
     "typescript": "~3.5.3"
   }
 }
